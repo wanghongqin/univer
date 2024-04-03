@@ -1,0 +1,33 @@
+.menu {
+    &-item {
+        &-no-hover {
+            background: none;
+        }
+
+        &-content {
+            display: inline-flex;
+            gap: var(--margin-xs);
+            align-items: center;
+        }
+
+        &-selectable {
+            position: relative;
+            padding-left: var(--padding-xl);
+
+            &-icon {
+                position: absolute;
+                left: 0;
+
+                display: inline-flex;
+                align-items: center;
+
+                font-size: var(--font-size-lg);
+            }
+        }
+
+        &-more-icon {
+            font-size: var(--font-size-sm);
+            color: rgb(var(--text-color));
+        }
+    }
+}

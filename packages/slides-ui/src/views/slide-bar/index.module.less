@@ -1,0 +1,80 @@
+.slide-bar {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    background: #f5f7f9;
+    border-right: 1px solid #eaecf0;
+    width: 260px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .slide-bar-content {
+        padding: 0 15px;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #eaecf0;
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f5f7f9;
+        }
+
+        .slide-bar-item {
+            display: flex;
+            margin: 15px 0;
+
+            span {
+                width: 15px;
+                font-size: 12px;
+            }
+
+            .slide-bar-box {
+                position: relative;
+
+                width: 212px;
+                height: 120px;
+                margin-left: 5px;
+
+                background: #fff;
+                border: 2px solid #c0c0c0;
+
+                &:hover {
+                    border: 2px solid #d66a2b;
+                }
+            }
+
+            &-active {
+                span {
+                    color: #d66a2b;
+                }
+
+                .slide-bar-box {
+                    border: 2px solid #d66a2b;
+                }
+            }
+        }
+    }
+
+    .slide-add-button {
+        padding: 10px 0;
+        text-align: center;
+
+        button {
+            width: 45px;
+            height: auto;
+
+            font-size: 24px;
+            line-height: 1;
+
+            border-radius: 10px;
+        }
+    }
+}

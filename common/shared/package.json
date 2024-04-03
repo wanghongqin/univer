@@ -1,0 +1,28 @@
+{
+    "name": "@univerjs/shared",
+    "version": "0.1.5",
+    "private": true,
+    "description": "Some infrastructures for univerjs",
+    "author": "DreamNum <developer@univer.ai>",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/dream-num/univer",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dream-num/univer.git"
+    },
+    "keywords": [],
+    "exports": {
+        "./eslint": "./eslint/index.js",
+        "./tsconfigs/*": "./tsconfigs/*.json",
+        "./vite": "./vite/index.js"
+    },
+    "dependencies": {
+        "@typescript-eslint/parser": "^7.4.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "@vitest/coverage-istanbul": "^1.4.0",
+        "happy-dom": "^13.3.8",
+        "vite": "^5.2.6",
+        "vite-plugin-dts": "^3.8.1",
+        "vitest": "^1.4.0"
+    }
+}

@@ -1,0 +1,15 @@
+@sheet-footer-bar-height: 36px;
+
+:export {
+    --sheet-footer-bar-height: unit(@sheet-footer-bar-height);
+}
+
+.sheet-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: @sheet-footer-bar-height;
+    padding: 0 var(--padding-xl);
+}

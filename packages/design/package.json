@@ -1,0 +1,105 @@
+{
+    "name": "@univerjs/design",
+    "version": "0.1.5",
+    "private": false,
+    "description": "UI component library for building exceptional Univer.",
+    "author": "DreamNum <developer@univer.ai>",
+    "license": "Apache-2.0",
+    "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/univer"
+    },
+    "homepage": "https://univer.ai",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dream-num/univer"
+    },
+    "bugs": {
+        "url": "https://github.com/dream-num/univer/issues"
+    },
+    "keywords": [
+        "univer"
+    ],
+    "sideEffects": [
+        "**/*.css"
+    ],
+    "exports": {
+        ".": "./src/index.ts",
+        "./*": "./src/*"
+    },
+    "main": "./lib/cjs/index.js",
+    "module": "./lib/es/index.js",
+    "types": "./lib/types/index.d.ts",
+    "publishConfig": {
+        "access": "public",
+        "main": "./lib/cjs/index.js",
+        "module": "./lib/es/index.js",
+        "exports": {
+            ".": {
+                "import": "./lib/es/index.js",
+                "require": "./lib/cjs/index.js",
+                "types": "./lib/types/index.d.ts"
+            },
+            "./*": {
+                "import": "./lib/es/*",
+                "require": "./lib/cjs/*",
+                "types": "./lib/types/index.d.ts"
+            },
+            "./lib/*": "./lib/*"
+        }
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "engines": {
+        "node": ">=16.0.0",
+        "npm": ">=8.0.0"
+    },
+    "scripts": {
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "coverage": "vitest run --coverage",
+        "lint:types": "tsc --noEmit",
+        "build": "tsc && vite build"
+    },
+    "peerDependencies": {
+        "clsx": ">=2.0.0",
+        "react": ">=16.9.0",
+        "react-dom": ">=16.9.0"
+    },
+    "dependencies": {
+        "@rc-component/color-picker": "^1.5.3",
+        "@rc-component/trigger": "^1.18.3",
+        "@univerjs/icons": "^0.1.42",
+        "dayjs": ">=1.11.10",
+        "rc-dialog": "^9.4.0",
+        "rc-dropdown": "^4.2.0",
+        "rc-input": "^1.4.5",
+        "rc-input-number": "^9.0.0",
+        "rc-menu": "^9.13.0",
+        "rc-picker": "^4.3.0",
+        "rc-segmented": "^2.3.0",
+        "rc-select": "^14.13.0",
+        "rc-tooltip": "^6.2.0",
+        "rc-util": "^5.39.1",
+        "react-draggable": "^4.4.6",
+        "react-transition-group": "^4.4.5"
+    },
+    "devDependencies": {
+        "@testing-library/react": "^14.2.1",
+        "@types/react": "^18.2.72",
+        "@types/react-dom": "^18.2.22",
+        "@types/react-transition-group": "^4.4.10",
+        "@univerjs/shared": "workspace:*",
+        "clsx": "^2.1.0",
+        "less": "^4.2.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.4.3",
+        "vite": "^5.2.6",
+        "vitest": "^1.4.0"
+    }
+}

@@ -1,0 +1,40 @@
+@sheet-bar-max-width: 1515px;
+@status-bar-max-width: 332px;
+@zoom-slider-width: 260px;
+@margin-right: -4px;
+
+.sheet-bar {
+    position: relative;
+
+    display: flex;
+    flex: 1 1 0px;
+    flex-direction: row;
+
+    min-width: calc(100% - @zoom-slider-width - @status-bar-max-width);
+    max-width: calc(100% - @zoom-slider-width);
+    height: 100%;
+
+    background-color: rgb(var(--bg-color));
+
+    &-options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin: var(--margin-xxs);
+
+        transition: display 0.2s;
+
+        &-divider::after {
+            content: '';
+
+            display: block;
+
+            width: 1px;
+            height: 16px;
+            margin: 0 var(--margin-xs);
+
+            background-color: rgb(var(--grey-400));
+        }
+    }
+}
